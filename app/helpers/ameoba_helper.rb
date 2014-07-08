@@ -1,0 +1,2 @@
+module AmeobaHelper
+end
