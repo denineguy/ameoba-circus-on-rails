@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<h1><%= @act.name %></h1>
+<p>Date: <%= @act.date%></p>
+<p>Time: <%= @act.time%></p>
 
 <%= link_to 'Edit', edit_act_path(@act) %> |
 <%= link_to 'Back', acts_path %>
