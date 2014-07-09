@@ -14,7 +14,7 @@
       </tr>
     <% @ameobas.each do |ameoba| %>
       <tr>
-        <td><%= ameoba.name %></td>
+        <td><%= link_to ameoba.name, ameoba%></td>
         <td><%= ameoba.talent.name %></td>
         <td><%= link_to 'Show', ameoba %></td>
         <td><%= link_to 'Edit', edit_ameoba_path(ameoba) %></td>
