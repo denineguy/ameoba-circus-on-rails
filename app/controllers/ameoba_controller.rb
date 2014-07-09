@@ -1,2 +1,0 @@
-class AmeobaController < ApplicationController
-end
