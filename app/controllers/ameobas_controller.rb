@@ -1,8 +1,14 @@
 class AmeobasController < ApplicationController
-  before_action :set_ameoba, only: [:show, :edit, :update, :destroy]
+  before_action :set_ameoba, only: [:show, :edit, :update, :destroy, :split]
 
+  def split
+    @ameoba.split
+    redirect_to ameobas_path
+  end
   # GET /ameobas
   # GET /ameobas.json
+
+
   def index
     @ameobas = Ameoba.all
   end
@@ -15,10 +21,14 @@ class AmeobasController < ApplicationController
   # GET /ameobas/new
   def new
     @ameoba = Ameoba.new
+    @talents = Talent.all
+    @acts = Act.all
   end
 
   # GET /ameobas/1/edit
   def edit
+    @talents = Talent.all
+    @acts = Act.all
   end
 
   # POST /ameobas
@@ -69,6 +79,6 @@ class AmeobasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ameoba_params
-      params[:ameoba]
+      params.require(:ameoba).permit(:name, :generating_number, :talent_id, :act_id)
     end
 end

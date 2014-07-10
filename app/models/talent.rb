@@ -1,3 +1,7 @@
 class Talent < ActiveRecord::Base
-  belongs_to :ameoba
+  has_many :ameobas
+
+  # def to_s
+  #   return self.name
+  # end
 end

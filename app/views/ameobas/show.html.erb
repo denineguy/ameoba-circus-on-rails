@@ -1,7 +1,20 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @ameoba.name %></h1>
-<p>Name: <%= @ameoba.name %></p>
-<p>Talent: <%= @ameoba.talent.name%></p>
+<p>
+  Name: <%= @ameoba.name %>
+</p>
+<p>
+  Talent: <%= @ameoba.talent.name%>
+</p>
+<p>
+  Generating Number: <%= @ameoba.generating_number%>
+</p>
+<p>
+  Act: <%= @ameoba.act_id%>
+</p>
 
+<%= form_tag "/ameobas/#{@ameoba.id}/split" do -%>
+<%= submit_tag "Split" %>
+ <% end %> 
 <%= link_to 'Edit', edit_ameoba_path(@ameoba) %> |
 <%= link_to 'Back', ameobas_path %>

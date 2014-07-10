@@ -2,6 +2,9 @@
 <h1><%= @act.name %></h1>
 <p>Date: <%= @act.date%></p>
 <p>Time: <%= @act.time%></p>
-
+<h3>Starring Ameobas</h3>
+<% @act.ameobas.each do |ameoba| %>
+    <p><%= ameoba.name %></p>
+<% end %>
 <%= link_to 'Edit', edit_act_path(@act) %> |
 <%= link_to 'Back', acts_path %>

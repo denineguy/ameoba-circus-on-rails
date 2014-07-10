@@ -11,11 +11,14 @@
       <tr>
         <td><strong>Name</strong></td>
         <td><strong>Talent</strong></td>
+        <td><strong>Generation</strong></td>
       </tr>
     <% @ameobas.each do |ameoba| %>
       <tr>
         <td><%= link_to ameoba.name, ameoba%></td>
         <td><%= ameoba.talent.name %></td>
+        <td><%= ameoba.generating_number %></td>
+        <td><%= ameoba.act.name %></td>
         <td><%= link_to 'Show', ameoba %></td>
         <td><%= link_to 'Edit', edit_ameoba_path(ameoba) %></td>
         <td><%= link_to 'Destroy', ameoba, method: :delete, data: { confirm: 'Are you sure?' } %></td>

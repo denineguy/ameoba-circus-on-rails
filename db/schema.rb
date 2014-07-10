@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 20140708210756) do
     t.string   "name"
     t.integer  "generating_number"
     t.integer  "act_id"
+    t.integer  "talent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "talents", force: true do |t|
     t.string   "name"
-    t.integer  "ameoba_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
