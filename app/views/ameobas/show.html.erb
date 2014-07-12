@@ -10,7 +10,7 @@
   Generating Number: <%= @ameoba.generating_number%>
 </p>
 <p>
-  Act: <%= @ameoba.act_id%>
+  Act: <%= @ameoba.act.name%>
 </p>
 
 <%= form_tag "/ameobas/#{@ameoba.id}/split" do -%>

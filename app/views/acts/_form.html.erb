@@ -12,30 +12,27 @@
   <% end %>
 
   <div class="actions">
+  
     <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :date %><br>
-    <%= f.date_field :date %>
-  </p>
-  <p>
-    <%= f.label :time %><br>
-    <%= f.time_field :time %>
-  </p>
-  <h3>Select Ameobas </h3>
-  <p>
-    <%= f.label :ameobas %>
-    <%= f.collection_check_boxes(:ameobas, Ameoba.all, :id, :name)%>
-  </p>
-
-  <h3>Select Ameobas </h3>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :date %><br>
+      <%= f.date_field :date %>
+    </p>
+    <h3>Select Ameobas </h3>
+    <p>
+      <%= f.label :ameobas %>
+      <%= f.collection_check_boxes(:ameobas, Ameoba.all, :id, :name)%>
+    </p>
+    <h3>Select Ameobas </h3>
   <p>
     <% @ameobas.each do |ameoba| %>
       <%=f.check_box :name%><%= ameoba.name %></br>
     <% end %>
   </p>
+
     <%= f.submit %>
   </div>
 <% end %>

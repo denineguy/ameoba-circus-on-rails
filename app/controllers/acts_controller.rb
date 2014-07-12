@@ -10,18 +10,18 @@ class ActsController < ApplicationController
   # GET /acts/1
   # GET /acts/1.json
   def show
-    @ameobas = Ameoba.all
+
   end
 
   # GET /acts/new
   def new
     @act = Act.new
-    @ameobas = Ameoba.all
   end
 
   # GET /acts/1/edit
   def edit
     @ameobas = Ameoba.all
+    @acts = Act.all.find(params[:id])
   end
 
   # POST /acts
@@ -75,6 +75,6 @@ class ActsController < ApplicationController
     #   params[:act]
     # end
     def act_params
-      params.require(:act).permit(:date, :time, :name, {} )
+      params.require(:act).permit(:name, :date, :time, :ameoba_name, {} )
     end
 end
